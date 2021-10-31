@@ -39,11 +39,11 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div');
-    let cactusPosition = 1000;
+    let cactusPosition = 1250;
     let randomTime = Math.random() * 6000;
 
     cactus.classList.add('cactus');
-    cactus.style.left = 1000 + 'px';
+    cactus.style.left = 1250 + 'px';
     background.appendChild(cactus);
 
     let leftInterval = setInterval(() => {
@@ -53,7 +53,7 @@ function createCactus() {
         } else if (cactusPosition > 0 && cactusPosition < 60 && position < 60) {
             // Game Over
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over">Vish! Se lascou!</h1>';          
+            document.body.innerHTML = '<h1 class="game-over">Vish! Se lascou!</h1>';
         } else {
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
